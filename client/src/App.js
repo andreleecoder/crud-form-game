@@ -12,7 +12,7 @@ function App() {
     }));
   };
   const handleClickButton = () => {
-    Axios.post("http://localhost:3001/register", {
+    Axios.post("https://crud-form-game.herokuapp.com/register", {
       name: values.name,
       cost: values.cost,
       category: values.category,
