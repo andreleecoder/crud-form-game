@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const mysql = require("mysql");
 const cors = require("cors");
-
+const PORT = 3001
 const db = mysql.createPool({
   host: "localhost",
   user: "root",
@@ -51,6 +51,6 @@ app.delete("/delete/:id", (req, res) => {
   });
 });
 
-app.listen(3001, () => {
-  console.log("rodando servidor");
+app.listen(process.env.PORT || PORT, () => {
+  console.log(`rodando servidor ${PORT}`);
 });
