@@ -21,7 +21,7 @@ function App() {
     });
   };
   useEffect(() => {
-    Axios.get("http://localhost:3001/getCards").then((response) => {
+    Axios.get("https://crud-form-game.herokuapp.com/getCards").then((response) => {
       setListGames(response.data);
     });
   });
