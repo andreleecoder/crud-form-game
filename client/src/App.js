@@ -12,7 +12,7 @@ function App() {
     }));
   };
   const handleClickButton = () => {
-    Axios.post("https://crud-form-game.herokuapp.com/register", {
+    Axios.post("http://localhost:3001/register", {
       name: values.name,
       cost: values.cost,
       category: values.category,
@@ -21,7 +21,7 @@ function App() {
     });
   };
   useEffect(() => {
-    Axios.get("https://crud-form-game.herokuapp.com/getCards").then((response) => {
+    Axios.get("http://localhost:3001/getCards").then((response) => {
       setListGames(response.data);
     });
   });

@@ -4,15 +4,12 @@ const mysql = require("mysql");
 const cors = require("cors");
 const PORT = 3001
 const db = mysql.createPool({
-  host: "us-cdbr-east-06.cleardb.net",
-  user: "b026e89c1ac3fc",
-  password: "7c504801",
-  database: "heroku_bec79e5944c0fef",
+  host: "localhost",
+  user: "root",
+  password: "1992",
+  database: "crud",
 });
 
-/*database heroku
-mysql://b026e89c1ac3fc:7c504801@us-cdbr-east-06.cleardb.net/heroku_bec79e5944c0fef?reconnect=true
-database heroku*/
 app.use(cors());
 app.use(express.json());
 

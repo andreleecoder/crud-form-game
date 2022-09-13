@@ -16,7 +16,7 @@ export default function FormDialog(props) {
 
     })
     const handleEditGame =()=>{
-      Axios.put("https://crud-form-game.herokuapp.com/edit", {
+      Axios.put("http://localhost:3001/edit", {
         id: editValues.id,
         name: editValues.name,
         cost: editValues.cost,
@@ -25,7 +25,7 @@ export default function FormDialog(props) {
       handleClose()
     }
     const handleDeleteGame =()=>{
-      Axios.delete(`https://crud-form-game.herokuapp.com/delete/${editValues.id}`);
+      Axios.delete(`http://localhost:3001/delete/${editValues.id}`);
       handleClose()
     };
     /*const handleClickOpen = () => {
