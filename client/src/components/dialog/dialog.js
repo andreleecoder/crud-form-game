@@ -28,9 +28,9 @@ export default function FormDialog(props) {
       Axios.delete(`http://localhost:3001/delete/${editValues.id}`);
       handleClose()
     };
-  const handleClickOpen = () => {
-    props.setOpen(true);
-  };
+    /*const handleClickOpen = () => {
+      props.setOpen(true);
+    };*/
   const handleChangeValues = value =>{
     setEditValues(prevValues=>({
       ...prevValues,
